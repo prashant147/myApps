@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SetWeather">
+            <connections>
+                <outlet property="btnSetWeather" destination="IpP-Dj-aGS" id="47o-Ug-x3Q"/>
+                <outlet property="labTitle" destination="IgG-La-7bn" id="XNW-Ex-Djf"/>
+                <outlet property="labWeatherType" destination="b2Z-GU-bAN" id="FYY-es-jz5"/>
+                <outlet property="pickerViewWeatherType" destination="u37-Dz-iMS" id="eiB-Eg-hjd"/>
+                <outlet property="textFieldCityName" destination="Yoc-j8-VF7" id="MId-4l-Fxh"/>
+                <outlet property="textFieldCurrentTemperature" destination="DqR-mL-5fX" id="ES6-8e-iMG"/>
+                <outlet property="textFieldHighTemperature" destination="v2m-B5-ARZ" id="dZv-gc-kC1"/>
+                <outlet property="textFieldLowTemperature" destination="pUK-7J-flP" id="q69-Sc-E7Z"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tj-Va-qfr">
+                    <rect key="frame" x="0.0" y="40" width="100" height="40"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="8Tj-Va-qfr" secondAttribute="height" multiplier="5:2" id="tuz-b0-S1j"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Back">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="天气设置" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgG-La-7bn">
+                    <rect key="frame" x="92" y="45" width="191" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="IgG-La-7bn" secondAttribute="height" multiplier="191:30" id="ssg-6q-RPG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IpP-Dj-aGS">
+                    <rect key="frame" x="107.5" y="582" width="160" height="50"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="IpP-Dj-aGS" secondAttribute="height" multiplier="16:5" id="6U1-6x-QAf"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="设置天气">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="setWeather:" destination="-1" eventType="touchUpInside" id="56n-FB-o6R"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="城市名字" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yoc-j8-VF7">
+                    <rect key="frame" x="70" y="120" width="234" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="qlX-2X-1IA"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="当前温度(℃)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DqR-mL-5fX">
+                    <rect key="frame" x="70" y="170" width="234" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="MoT-KE-tBP"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="最高温度(℃)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v2m-B5-ARZ">
+                    <rect key="frame" x="70" y="220" width="234" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="S49-ja-q7J"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="最低温度(℃)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pUK-7J-flP">
+                    <rect key="frame" x="70" y="270" width="234" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="0wD-Xp-mTE"/>
+                    </connections>
+                </textField>
+                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u37-Dz-iMS">
+                    <rect key="frame" x="0.0" y="357" width="375" height="162"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="nmf-3L-vRT"/>
+                        <outlet property="delegate" destination="-1" id="uqc-8C-p6S"/>
+                    </connections>
+                </pickerView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="天气类型" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2Z-GU-bAN">
+                    <rect key="frame" x="70" y="328" width="236" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="IpP-Dj-aGS" secondAttribute="bottom" constant="35" id="81K-NV-vZJ"/>
+                <constraint firstItem="8Tj-Va-qfr" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.266667" id="ONb-bN-h2N"/>
+                <constraint firstItem="8Tj-Va-qfr" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="bgh-VQ-AFg"/>
+                <constraint firstItem="8Tj-Va-qfr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="cBi-qx-G6c"/>
+                <constraint firstItem="IpP-Dj-aGS" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="fPm-X4-419"/>
+                <constraint firstItem="IgG-La-7bn" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="g2N-de-VF3"/>
+                <constraint firstItem="IgG-La-7bn" firstAttribute="centerY" secondItem="8Tj-Va-qfr" secondAttribute="centerY" id="i6S-cj-HT6"/>
+                <constraint firstItem="IpP-Dj-aGS" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.426667" id="qXF-sf-Rz0"/>
+                <constraint firstItem="IgG-La-7bn" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.509333" id="wJ2-XD-Jm3"/>
+            </constraints>
+            <point key="canvasLocation" x="138.40000000000001" y="60.719640179910051"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

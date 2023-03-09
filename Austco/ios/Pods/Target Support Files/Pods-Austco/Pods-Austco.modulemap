@@ -1,0 +1,6 @@
+module Pods_Austco {
+  umbrella header "Pods-Austco-umbrella.h"
+
+  export *
+  module * { export * }
+}

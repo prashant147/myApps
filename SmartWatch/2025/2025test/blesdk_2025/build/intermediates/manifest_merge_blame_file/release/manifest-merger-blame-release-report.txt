@@ -1,0 +1,13 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.jstyle.blesdk2025"
+4    android:versionCode="22"
+5    android:versionName="22.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="18"
+8-->C:\Users\Administrator\Desktop\xiangmu\2025\2025\2025test\blesdk_2025\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->C:\Users\Administrator\Desktop\xiangmu\2025\2025\2025test\blesdk_2025\src\main\AndroidManifest.xml
+10
+11</manifest>

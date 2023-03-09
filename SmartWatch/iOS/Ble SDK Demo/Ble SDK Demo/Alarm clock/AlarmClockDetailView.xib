@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlarmClockDetailView">
+            <connections>
+                <outlet property="btnChooseWeeks" destination="39W-zO-xWt" id="wFY-oe-C4v"/>
+                <outlet property="btnDrinkAlarmClock" destination="EcN-Yi-xq5" id="smD-Yg-Sut"/>
+                <outlet property="btnFoodAlarmClock" destination="dze-L3-rGD" id="mEj-tP-KRD"/>
+                <outlet property="btnNormalAlarmClock" destination="gwC-TZ-LtL" id="Gzf-gx-rVV"/>
+                <outlet property="btnSetAlarmClock" destination="F18-cd-5U1" id="ZOr-cx-Ftt"/>
+                <outlet property="btnTakeMedicineAlarmClock" destination="Uho-d9-6u4" id="Baa-z0-fi0"/>
+                <outlet property="labAlarmClockType" destination="93L-Mn-FGt" id="RiA-7Z-1KB"/>
+                <outlet property="labContentName" destination="DbE-fe-G02" id="5Jz-8Z-mnp"/>
+                <outlet property="labDrinkAlarmClock" destination="w2t-gl-WJR" id="zzu-h2-93c"/>
+                <outlet property="labFoodAlarmClock" destination="tJy-qD-58c" id="CqH-ha-Dsz"/>
+                <outlet property="labNormalAlarmClock" destination="GVs-5I-XWI" id="0Ii-dg-Inu"/>
+                <outlet property="labRepeatName" destination="nVa-p1-n9r" id="Msl-MF-AaY"/>
+                <outlet property="labRepeatValue" destination="twP-NJ-luu" id="qSM-Tu-9T5"/>
+                <outlet property="labTakeMedicineAlarmClock" destination="y3S-z1-EDy" id="h0D-vv-net"/>
+                <outlet property="myDatePickerView" destination="Ev1-2T-ZUE" id="5G2-pQ-98V"/>
+                <outlet property="textFieldContent" destination="TNA-2R-b2t" id="rq4-0S-qbW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0E-86-fEU">
+                    <rect key="frame" x="0.0" y="40" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="N0E-86-fEU" secondAttribute="height" multiplier="1:1" id="YTQ-3h-iOw"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="返回Black"/>
+                    <connections>
+                        <action selector="back:" destination="-1" eventType="touchUpInside" id="hqb-YN-cFJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F18-cd-5U1">
+                    <rect key="frame" x="338" y="49" width="22" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="F18-cd-5U1" secondAttribute="height" multiplier="1:1" id="KU6-7T-Feg"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="勾选1963YH"/>
+                    <connections>
+                        <action selector="setAlarmClock:" destination="-1" eventType="touchUpInside" id="gB2-Kd-Geg"/>
+                    </connections>
+                </button>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Ev1-2T-ZUE">
+                    <rect key="frame" x="0.0" y="100" width="375" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Ev1-2T-ZUE" secondAttribute="height" multiplier="15:8" id="OL6-zk-ONZ"/>
+                    </constraints>
+                </datePicker>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标签" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbE-fe-G02">
+                    <rect key="frame" x="10" y="315" width="100" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="DbE-fe-G02" secondAttribute="height" multiplier="5:2" id="OmU-nz-AJP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
+                    <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="重复" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVa-p1-n9r">
+                    <rect key="frame" x="10" y="376" width="100" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="nVa-p1-n9r" secondAttribute="height" multiplier="5:2" id="fDd-1c-750"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
+                    <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="闹钟类型" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93L-Mn-FGt">
+                    <rect key="frame" x="10" y="437" width="208" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="93L-Mn-FGt" secondAttribute="height" multiplier="5:2" constant="108" id="i2p-EV-bIV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
+                    <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aOX-Li-UyD">
+                    <rect key="frame" x="0.0" y="300" width="375" height="5"/>
+                    <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="aOX-Li-UyD" secondAttribute="height" multiplier="75:1" id="n2q-KB-Lfs"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TNA-2R-b2t">
+                    <rect key="frame" x="115" y="315" width="250" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="TNA-2R-b2t" secondAttribute="height" multiplier="25:4" id="dd7-K4-aRv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Exa-Ta-TDs"/>
+                    </connections>
+                </textField>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x14-aR-tdD">
+                    <rect key="frame" x="10" y="365" width="355" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="B3r-cj-uuG"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8hx-vz-bI5">
+                    <rect key="frame" x="10" y="426" width="355" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="oFg-Hf-Mas"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twP-NJ-luu">
+                    <rect key="frame" x="145" y="376" width="200" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="twP-NJ-luu" secondAttribute="height" multiplier="5:1" id="7TL-QR-5ZM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
+                    <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39W-zO-xWt">
+                    <rect key="frame" x="350" y="389" width="8" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="39W-zO-xWt" secondAttribute="height" multiplier="4:7" id="lQb-lB-Pe2"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="我的-下列跳转"/>
+                    <connections>
+                        <action selector="chooseWeeks:" destination="-1" eventType="touchUpInside" id="OIR-h6-LvF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwC-TZ-LtL">
+                    <rect key="frame" x="38" y="510" width="35" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" backgroundImage="闹钟-已选中"/>
+                    <connections>
+                        <action selector="chooseAlarmClockType:" destination="-1" eventType="touchUpInside" id="xBA-nG-eVD"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="普通闹钟" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVs-5I-XWI">
+                    <rect key="frame" x="10.5" y="545" width="90" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
+                    <color key="textColor" red="0.30980392156862746" green="0.65098039215686276" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uho-d9-6u4">
+                    <rect key="frame" x="125" y="510" width="35" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" backgroundImage="吃药-未选中"/>
+                    <connections>
+                        <action selector="chooseAlarmClockType:" destination="-1" eventType="touchUpInside" id="hzv-JK-yKX"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="吃药闹钟" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3S-z1-EDy">
+                    <rect key="frame" x="97.5" y="545" width="90" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
+                    <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EcN-Yi-xq5">
+                    <rect key="frame" x="214" y="510" width="35" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" backgroundImage="喝水-未选中"/>
+                    <connections>
+                        <action selector="chooseAlarmClockType:" destination="-1" eventType="touchUpInside" id="GOV-J0-AXC"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="喝水闹钟" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2t-gl-WJR">
+                    <rect key="frame" x="186.5" y="545" width="90" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
+                    <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dze-L3-rGD">
+                    <rect key="frame" x="302" y="510" width="35" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" backgroundImage="吃饭-未选中"/>
+                    <connections>
+                        <action selector="chooseAlarmClockType:" destination="-1" eventType="touchUpInside" id="sWI-Gb-Ny0"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="吃饭闹钟" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJy-qD-58c">
+                    <rect key="frame" x="274.5" y="545" width="90" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
+                    <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="N0E-86-fEU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="2cA-Tu-fT7"/>
+                <constraint firstItem="8hx-vz-bI5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="2yM-z6-tYa"/>
+                <constraint firstItem="93L-Mn-FGt" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.266667" constant="108" id="B4H-HT-b4e"/>
+                <constraint firstItem="93L-Mn-FGt" firstAttribute="top" secondItem="8hx-vz-bI5" secondAttribute="bottom" constant="10" id="BNI-Cv-qTc"/>
+                <constraint firstItem="F18-cd-5U1" firstAttribute="centerY" secondItem="N0E-86-fEU" secondAttribute="centerY" id="KcS-km-lxn"/>
+                <constraint firstItem="x14-aR-tdD" firstAttribute="top" secondItem="DbE-fe-G02" secondAttribute="bottom" constant="10" id="N4t-2B-U7T"/>
+                <constraint firstItem="x14-aR-tdD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="NB3-YJ-hPR"/>
+                <constraint firstItem="TNA-2R-b2t" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.666667" id="P3F-tv-tg5"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="TNA-2R-b2t" secondAttribute="trailing" constant="10" id="PYp-Ew-HGj"/>
+                <constraint firstItem="aOX-Li-UyD" firstAttribute="top" secondItem="Ev1-2T-ZUE" secondAttribute="bottom" id="QBp-jp-GiG"/>
+                <constraint firstItem="nVa-p1-n9r" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="Rln-Kj-Sve"/>
+                <constraint firstItem="Ev1-2T-ZUE" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Rze-8f-ORc"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="F18-cd-5U1" secondAttribute="trailing" constant="15" id="Six-wU-8wE"/>
+                <constraint firstItem="twP-NJ-luu" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.533333" id="TZI-uN-JVa"/>
+                <constraint firstItem="aOX-Li-UyD" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="Tg4-mg-VPm"/>
+                <constraint firstItem="N0E-86-fEU" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="WkP-E5-Pjk"/>
+                <constraint firstItem="DbE-fe-G02" firstAttribute="top" secondItem="aOX-Li-UyD" secondAttribute="bottom" constant="10" id="XKQ-nX-NOx"/>
+                <constraint firstItem="DbE-fe-G02" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.266667" id="YeS-Bb-TcD"/>
+                <constraint firstItem="TNA-2R-b2t" firstAttribute="centerY" secondItem="DbE-fe-G02" secondAttribute="centerY" id="aFQ-4g-rPF"/>
+                <constraint firstItem="F18-cd-5U1" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.0586667" id="akS-g3-dDG"/>
+                <constraint firstItem="nVa-p1-n9r" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.266667" id="b7O-x8-Apv"/>
+                <constraint firstItem="8hx-vz-bI5" firstAttribute="top" secondItem="nVa-p1-n9r" secondAttribute="bottom" constant="10" id="bd6-Wj-moM"/>
+                <constraint firstItem="93L-Mn-FGt" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="btw-Ia-UPT"/>
+                <constraint firstAttribute="trailing" secondItem="x14-aR-tdD" secondAttribute="trailing" constant="10" id="cRJ-h4-UM7"/>
+                <constraint firstItem="N0E-86-fEU" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.106667" id="cSv-gc-Tzs"/>
+                <constraint firstItem="aOX-Li-UyD" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="fQm-fu-yOm"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="39W-zO-xWt" secondAttribute="trailing" constant="17" id="gF5-FO-42T"/>
+                <constraint firstItem="nVa-p1-n9r" firstAttribute="top" secondItem="x14-aR-tdD" secondAttribute="bottom" constant="10" id="m13-Qu-Xdz"/>
+                <constraint firstAttribute="trailing" secondItem="8hx-vz-bI5" secondAttribute="trailing" constant="10" id="nqk-zq-GYj"/>
+                <constraint firstItem="39W-zO-xWt" firstAttribute="centerY" secondItem="nVa-p1-n9r" secondAttribute="centerY" id="pb6-pT-cab"/>
+                <constraint firstItem="39W-zO-xWt" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.0213333" id="pc9-Nm-6nU"/>
+                <constraint firstItem="Ev1-2T-ZUE" firstAttribute="top" secondItem="N0E-86-fEU" secondAttribute="bottom" constant="20" id="puQ-eP-g2z"/>
+                <constraint firstItem="twP-NJ-luu" firstAttribute="centerY" secondItem="39W-zO-xWt" secondAttribute="centerY" id="vyq-dd-tdY"/>
+                <constraint firstItem="39W-zO-xWt" firstAttribute="leading" secondItem="twP-NJ-luu" secondAttribute="trailing" constant="5" id="w8c-p0-dsP"/>
+                <constraint firstItem="DbE-fe-G02" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="wyk-P5-aNV"/>
+                <constraint firstItem="Ev1-2T-ZUE" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="xnO-J8-wqz"/>
+            </constraints>
+            <point key="canvasLocation" x="-146.40000000000001" y="43.628185907046479"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="勾选1963YH" width="22" height="22"/>
+        <image name="吃药-未选中" width="35" height="31"/>
+        <image name="吃饭-未选中" width="35" height="31"/>
+        <image name="喝水-未选中" width="35" height="31"/>
+        <image name="我的-下列跳转" width="8" height="12"/>
+        <image name="返回Black" width="40.5" height="40.5"/>
+        <image name="闹钟-已选中" width="35" height="31"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
